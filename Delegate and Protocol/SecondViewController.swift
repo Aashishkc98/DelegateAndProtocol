@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SecondViewController.swift
 //  Delegate and Protocol
 //
 //  Created by Ashish on 10/3/19.
@@ -8,21 +8,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SecondViewController: UIViewController {
 
-    @IBOutlet weak var lblName: UILabel!
-    @IBOutlet weak var lblAddress: UILabel!
-    @IBOutlet weak var lblCity: UILabel!
+    @IBOutlet weak var txtName: UITextField!
+      @IBOutlet weak var txtAddress: UITextField!
+      @IBOutlet weak var txtCity: UITextField!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
-
-
-    @IBAction func btnGoToNext(_ sender: UIButton) {
+    
+    @IBAction func btnSave(_ sender: UIButton) {
     }
+    
 }
-
