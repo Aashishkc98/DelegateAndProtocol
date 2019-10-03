@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, DataPass {
+  
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblAddress: UILabel!
     @IBOutlet weak var lblCity: UILabel!
@@ -18,11 +18,20 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
     }
 
 
     @IBAction func btnGoToNext(_ sender: UIButton) {
+        let secondVC = self.storyboard?.instantiateViewController(identifier: "Second") as! SecondViewController
+        secondVC.delegate = self
+        self.navigationController?.pushViewController(secondVC, animated: true)
+    }
+    
+    func dataPassing(name: String, address: String, city: String) {
+        lblName.text = name
+        lblAddress.text = address
+        lblCity.text = city
     }
 }
 
